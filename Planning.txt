@@ -1,0 +1,45 @@
+Questions (to Binesh):
+1. Training in Pune T12 & Powai? Webex/Conf for other locations? Yes
+2. Who was involved in TD training? Mario? Yes
+3. Training room booking? TBD by Rahul et. al.
+4. Some new joinees have not attended Factory training? No. All are grads.
+5. List of participants from Binesh - Received.
+6. Assumption: Team will use TD VM on their machines. OK.
+
+
+Overview topics:
+1. Initial load - Volume, Batches/split, Transactional vs Master data - Ragini
+2. Test Planning & Phases (Test Plan, Coverage, Test Data, UT, ST, IT, UAT, PIV) - Rahul
+3. Version control & GitHub - Madhumita
+4. Unix - Shell scripting, crontab (scheduling), sequencing and dependencies in scripts - Madhumita/Rahul
+5. Control structures, auditing, logging, monitoring, GCFR concepts** - Sheetal
+6. Deployment process - Plan, backups - Sheetal
+7. Coding standards - Sheetal
+8. Error capture, handling, reporting, cleanup, restart. Troubleshooting, analysis, fix. - Madhumita
+9. Housekeeping - Log table, file cleanup - Ragini
+10. Data archival & purge - Ragini
+11. Master data considerations - Maintaining history (SCD Type 1/2, History tables, Merge logic, Valid date columns, Temporal concept) - Ragini/Rahul
+12. Operational aspects - Backlog, maintenance downtime, etc. - Rahul
+13. Performance considerations - TPT review, Insert/select, #sessions, high volume, etc. - Rahul
+14. Multiple environment considerations / development process - Madhumita
+15. Script generation - DBC/data dictionary tables - Ragini
+16. Temporary/volatile tables vs permanent tables - Sheetal
+
+Migration topics: Binesh to let us know
+
+
+Planning activities:
+1. Develop historical data - Ragini
+	3 sets of monthly files for transational (i.e. CDR - data plan, voice plan) data, latest file for customer profile data
+	Update dates in existing files to Sep, Oct & Nov
+	(Optional) certain fields null in oldest set of files - e.g. address?
+	Master data (customer profile, plan master) should be used as-is
+2. Control/audit/logging framework - Sheetal
+	Sample data model
+	Sample shell scripts - Invoking BTEQ, Updating control tables
+3. Daily incremental files - 3 sets - Madhumita
+	transactional CDR data
+	incremental master data
+4. Automation of incremental load - None
+5. Clean-up of failed load - None
+6. Test plan/case templates
